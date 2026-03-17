@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fake-api
+spec:
+  selector:
+    app: fake-api
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}

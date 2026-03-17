@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: frontend
+  namespace: demo
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: ../../../../charts/frontend
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+        namespace: flux-system
+  valuesFrom:
+    - kind: GitRepository
+      name: flux-system
+      path: resources/apps/frontend/values.yaml
+      namespace: flux-system
