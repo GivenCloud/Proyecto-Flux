@@ -13,7 +13,6 @@ spec:
         name: flux-system
         namespace: flux-system
   valuesFrom:
-    - kind: GitRepository
-      name: flux-system
-      path: resources/apps/frontend/values.yaml
-      namespace: flux-system
+  - kind: ConfigMap
+    name: frontend-values
+    valuesKey: values.yaml
