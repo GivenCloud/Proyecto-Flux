@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: demo
 
 resources:
-# - ../backend/lab
+- ../backend/lab
 - ../frontend/lab
 - ../redis/lab
