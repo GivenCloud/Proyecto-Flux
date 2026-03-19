@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fake-api
+  name: backend
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: fake-api
+      app: backend
   template:
     metadata:
       labels:
-        app: fake-api
+        app: backend
     spec:
       containers:
-        - name: fake-api
+        - name: backend
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: {{ .Values.service.port }}

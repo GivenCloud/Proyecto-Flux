@@ -8,4 +8,4 @@ service:
   port: 80
 
 env:
-  apiUrl: http://fake-api
+  apiUrl: http://backend

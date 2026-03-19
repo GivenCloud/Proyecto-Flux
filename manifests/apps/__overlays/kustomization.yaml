@@ -5,4 +5,4 @@ namespace: demo
 resources:
 - ../backend/lab
 - ../frontend/lab
-- ../redis/lab
+# - ../redis/lab
